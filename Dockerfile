@@ -6,6 +6,6 @@ RUN apk --update add openssh zip unzip && \
     rm -rf /var/lib/apt/lists/* && \
     rm /var/cache/apk/*
 
-RUN echo "container is up" > /tmp/wait
+RUN echo -e "Hello!\nThe container is up and running.\n" > /tmp/wait && cat /tmp/wait
 
 CMD ["tail", "-f", "/tmp/wait"]
