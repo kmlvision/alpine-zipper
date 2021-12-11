@@ -6,6 +6,6 @@ RUN apk --update add openssh zip unzip && \
     rm -rf /var/lib/apt/lists/* && \
     rm /var/cache/apk/*
 
-RUN touch /tmp/wait
+RUN echo "container is up" > /tmp/wait
 
 CMD ["tail", "-f", "/tmp/wait"]
